@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results - ID AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="min-h-screen bg-gray-50">
+    <header class="py-6 px-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-indigo-900">ID AI</h1>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="index.html" class="text-indigo-700 hover:text-indigo-900">Home</a></li>
+                    <li><a href="search.html" class="text-indigo-700 hover:text-indigo-900">Search</a></li>
+                    <li><a href="about.html" class="text-indigo-700 hover:text-indigo-900">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container mx-auto px-4 py-8">
+        <!-- Search bar -->
+        <form action="search.html" method="get" class="mb-8" onsubmit="saveQuery()">
+            <div class="relative">
+                <input type="text" id="searchQuery" name="q" placeholder="Ask ID AI anything..." 
+                       class="w-full px-6 py-3 rounded-full shadow-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                <button type="submit" 
+                        class="absolute right-2 top-2 bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-1 rounded-full transition duration-300">
+                    Search
+                </button>
+            </div>
+        </form>
+        
+        <!-- Results will be populated by JavaScript -->
+        <div id="searchResults" class="space-y-6">
+            <div class="text-center py-12">
+                <p class="text-gray-500 text-lg">Loading results...</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/search.js"></script>
+</body>
+</html>
